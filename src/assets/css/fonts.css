@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+        local('SpoqaHanSansNeoThin'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Thin.eot) format('embedded-opentype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Thin.ttf) format('truetype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Thin.woff) format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+        local('SpoqaHanSansNeoLight'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Light.eot) format('embedded-opentype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Light.ttf) format('truetype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+        local('SpoqaHanSansNeoRegular'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Regular.eot) format('embedded-opentype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Regular.ttf) format('truetype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+        local('SpoqaHanSansNeoMedium'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Medium.eot) format('embedded-opentype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Medium.ttf) format('truetype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    src:
+        local('SpoqaHanSansNeoBold'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Bold.eot) format('embedded-opentype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Bold.ttf) format('truetype'),
+        url(@/assets/fonts/SpoqaHanSansNeo-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+}

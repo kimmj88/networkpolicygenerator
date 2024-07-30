@@ -1,0 +1,444 @@
+.gnb.left nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--nav-bg);
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
+    z-index: var(--z-index-bg-gnb-base);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    flex: 1 1 auto;
+}
+.gnb.left nav ul {
+    margin: 0;
+}
+.gnb.left nav .titleDiv {
+    margin: 22px 0 36px 0;
+    color: var(--text);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gnb.left nav .titleDiv > .title {
+    margin: 0 19px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.gnb.left nav .titleDiv > .version {
+    padding-top: 0.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.gnb.left nav .menuDiv {
+    height: calc(100% - 26rem);
+    overflow-y: auto;
+}
+
+.gnb.left nav .menuDiv::-webkit-scrollbar {
+    width: 0.7rem; /*스크롤바의 너비*/
+}
+
+.gnb.left nav .menuDiv::-webkit-scrollbar-thumb {
+    background-color: var(--text); /*스크롤바의 색상*/
+}
+
+.gnb.left nav .menuDiv::-webkit-scrollbar-track {
+    background-color: var(--nav-bg); /*스크롤바 트랙 색상*/
+}
+
+.gnb.left nav ol,
+.gnb.left nav ul {
+    padding-left: 0 !important;
+    color: var(--text);
+}
+.gnb.left nav li > span {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.gnb.left nav li > span > div {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: all ease 0.5s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gnb.left nav li > span > div.name {
+    padding-left: 1rem;
+}
+
+.gnb.left nav li > ul {
+    display: none;
+    height: 0px;
+}
+.gnb.left nav li.view > ul {
+    transition: all 1s linear;
+    height: 100%;
+    display: block;
+}
+.gnb.left nav li.view > span > div {
+    transform: rotate(0deg);
+}
+.gnb.left nav li > span:hover > div,
+.gnb.left nav li > span.clicked > div {
+    color: var(--text-hover);
+}
+.gnb.left nav li > span.dir > .ic_arrow {
+    display: block !important;
+}
+.gnb.left nav li > ul > li {
+    margin-left: 20px;
+}
+
+.gnb.left nav .infoDiv {
+    margin: 36px 0 60px 0;
+}
+.gnb.left nav .infoDiv li > span {
+    cursor: unset;
+}
+.gnb.left nav .infoDiv li > span > div {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--text);
+}
+.gnb.left nav .infoDiv li > span > div:hover {
+    color: var(--text-hover);
+    cursor: pointer;
+}
+.gnb.left nav .infoDiv li.user > span {
+    justify-content: space-between;
+    color: var(--text);
+}
+
+.gnb.left nav .infoDiv .dropdown {
+    cursor: pointer;
+    z-index: var(--z-index-bg-gnb-item);
+}
+.gnb.left nav .infoDiv .dropdown.language {
+    top: -3rem;
+}
+.gnb.left nav .infoDiv .dropdown li > a,
+.gnb.left nav .infoDiv .dropdown li > span {
+    height: 3rem;
+}
+.gnb.left nav .infoDiv .dropdown li > span > div {
+    font-weight: 700;
+    font-size: 1rem;
+}
+.gnb.left nav .infoDiv .dropdown.view {
+    display: block;
+}
+.gnb.left nav .infoDiv .dropdown.position {
+    position: absolute;
+    /* transform: translateX(var(--gnb-width)) translateY(calc(0px - (var(--gnb-height) * 1.6))); */
+    transform: translateX(var(--gnb-width)) translateY(calc(0px - 4rem));
+    min-width: calc(var(--gnb-width) - 2rem);
+}
+.gnb.left nav .infoDiv .dropdown.position-sub {
+    position: absolute;
+    transform: translateX(calc(var(--gnb-width) - 2rem)) translateY(-3rem);
+    min-width: 12rem;
+}
+.gnb.left nav .infoDiv .dropdown div {
+    background-color: var(--nav-bg);
+}
+.gnb.left nav .infoDiv .dropdown div li > a {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.gnb.left nav .infoDiv .dropdown .dropdown-item {
+    padding: 0 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gnb.left nav .infoDiv .dropdown .dropdown-item:hover strong {
+    color: var(--text-hover);
+}
+.gnb.left nav .infoDiv .dropdown .dropdown-divider {
+    width: 96%;
+    text-align: center;
+    margin: 0 2% 0 2%;
+    /* border: solid 1px var(--content-bg-80); */
+}
+
+.body.gnb-left:has(.gnb.left) .loadingBg {
+    padding: 0 0 0 var(--gnb-width);
+}
+
+.body.gnb-left:has(.gnb.left):has(.popupBg.block) .loadingBg {
+    padding: 0;
+}
+
+.body.gnb-top .content-wrapper {
+    padding-top: var(--gnb-height);
+    padding-bottom: 1.2rem;
+}
+
+.gnb.top nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* background: #3E8DA8; */
+    background: var(--nav-bg);
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
+    z-index: 99;
+}
+
+.gnb.top ol,
+.gnb.top ul {
+    padding-left: 0 !important;
+}
+.gnb.top nav .navbar {
+    height: 100%;
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 50px;
+}
+.gnb.top .navbar .logo a {
+    font-size: 30px;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 600;
+    filter: invert(100%);
+}
+.gnb.top .navbar .logo .title {
+    color: var(--nav-bg);
+}
+.gnb.top nav .navbar .nav-links {
+    line-height: 70px;
+    height: 100%;
+}
+.gnb.top nav .navbar .links {
+    display: flex;
+    /* max-width: 800px; */
+}
+.gnb.top nav .navbar .links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0 1rem;
+}
+.gnb.top nav .navbar .links li a {
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--nav-text);
+    font-size: 15px;
+    font-weight: 500;
+}
+.gnb.top .links li .menu-icon {
+    padding-right: 0.2rem;
+    line-height: 70px;
+}
+.gnb.top .links li .menu-icon,
+.gnb.top .links li .lang-icon {
+    font-size: 1.5rem;
+    color: var(--nav-icon);
+}
+.gnb.top .links li .root-arrow {
+    transform: rotate(-180deg);
+}
+.gnb.top .links li:hover {
+    cursor: pointer;
+    border: 2px;
+}
+.gnb.top .links li:hover .root-arrow {
+    transform: rotate(0deg);
+}
+.gnb.top .links li .arrow {
+    height: 100%;
+    width: 22px;
+    line-height: 70px;
+    text-align: center;
+    display: inline-block;
+    color: var(--nav-arrow);
+    transition: all 0.3s ease;
+}
+/* 메뉴바 hover 시 색 변경 */
+.gnb.top .links li:hover > span a,
+.gnb.top .links li:hover > span em,
+.gnb.top .links li:hover > .sub-menu > li:hover > span a {
+    color: var(--nav-text-hover);
+}
+.gnb.top nav .navbar .links li .sub-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    line-height: 40px;
+    background: #000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    display: none;
+    z-index: 99;
+    /* min-width: 100%; */
+}
+.gnb.top nav .navbar .links li .sub-menu-right {
+    left: -100%;
+}
+.gnb.top nav .navbar .links li .sub-menu .more span {
+    display: inline-flex;
+}
+.gnb.top nav .navbar .links li:hover .root-sub-menu,
+.gnb.top nav .navbar .links li .root-sub-menu:hover {
+    display: block;
+}
+.gnb.top .navbar .links li .sub-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;
+    min-width: 5rem;
+}
+.gnb.top .navbar .links li .sub-menu li span {
+    width: 100%;
+    padding: 0 1rem;
+}
+.gnb.top .navbar .links li .sub-menu a {
+    color: var(--nav-text);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 0.2rem;
+}
+.gnb.top .navbar .links li .sub-menu .more-arrow {
+    line-height: 40px;
+}
+.gnb.top .navbar .links li .sub-menu .more-sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 0 4px 4px;
+    z-index: 99;
+    display: none;
+}
+.gnb.top .links li .sub-menu .more:hover .more-sub-menu {
+    display: block;
+}
+.gnb.top .navbar .user {
+    display: inline-flex;
+    height: 100%;
+    color: var(--nav-icon);
+}
+.gnb.top .navbar .user .system-info {
+    display: inline-flex;
+}
+.gnb.top .navbar .user .system-info:has(.clock.stop) {
+    display: none;
+}
+.gnb.top .navbar .user .system-info .clock {
+    display: flex;
+    align-items: center;
+    color: var(--content-bg-green);
+}
+.gnb.top .navbar .user .system-info .clock.stop {
+    color: var(--content-bg-red);
+}
+.gnb.top .navbar .user .system-info .clock > p {
+    margin: 0 0.5rem;
+}
+.gnb.top .navbar .user .system-info .oper-status {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.gnb.top .navbar .oper-status .status-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+.gnb.top .navbar .oper-status .status-circle.red {
+    background-color: var(--content-bg-red);
+}
+.gnb.top .navbar .oper-status .status-circle.green {
+    background-color: var(--content-bg-green);
+}
+.gnb.top .navbar .user .user-info {
+    position: relative;
+    line-height: 90px;
+    margin-left: 0.5rem;
+}
+.gnb.top .navbar .user .user-icon {
+    cursor: pointer;
+    font-size: 2rem;
+}
+.gnb.top .navbar .user .card {
+    position: absolute;
+    top: 70px;
+    left: -260px;
+    border: 0;
+    width: 320px;
+}
+.gnb.top .navbar .user .user-info:hover .card {
+    display: block !important;
+}
+.gnb.top .navbar .user .dropdown {
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+.gnb.top .navbar .lang-box {
+    position: relative;
+    margin-top: 0.5rem;
+    line-height: 40px;
+}
+.gnb.top .navbar .dropdown > .dropdown-menu {
+    top: 70px;
+    left: -120px;
+    border: 0;
+    background-color: var(--nav-bg);
+    vertical-align: text-top;
+}
+.gnb.top .navbar .dropdown > .dropdown-menu .dropdown-item {
+    padding: 0 1rem;
+}
+/* 다국어 처리 hover 시 색 변경 */
+.gnb.top .dropdown-menu .dropdown-item:focus,
+.gnb.top .dropdown-menu .dropdown-item:hover {
+    background-color: var(--nav-bg) !important;
+    color: var(--nav-text-hover) !important;
+}
+.gnb.top .dropdown-menu .dropdown-item:focus,
+.gnb.top .dropdown-menu .dropdown-item:hover .flag {
+    box-shadow: 5px 10px 10px 5px var(--nav-text-hover);
+}
+
+.gnb.top .navbar .dropdown:hover > .dropdown-menu,
+.gnb.top .navbar .dropdown:hover > .card {
+    display: block;
+    border-radius: 0 0 4px 4px;
+}
+.gnb.top .nav-bg-color {
+    background-color: var(--nav-bg);
+    height: unset;
+}
+.gnb.top .nav-text-color {
+    color: var(--nav-text);
+}
+.gnb.top .navbar .nav-links .sidebar-logo,
+.gnb.top .navbar .bx-menu {
+    display: none;
+}
+.gnb.top .dev-box {
+    color: red;
+}
+.gnb.top .navbar .user:has(.clock.stop) .user-info .card .btn-group {
+    display: none;
+}

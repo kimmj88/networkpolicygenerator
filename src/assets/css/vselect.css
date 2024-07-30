@@ -1,0 +1,16 @@
+.v-select {
+    background-color: white;
+    .vs__selected {
+        /* padding: 0 8px !important; */
+        min-height: 2rem !important;
+    }
+}
+
+.v-select > ul {
+    max-height: 10rem;
+}
+.vs__search {
+    color: rgba(111, 111, 111, 0.6);
+    height: 2rem;
+    padding-left: 0 !important;
+}

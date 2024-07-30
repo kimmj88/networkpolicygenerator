@@ -1,0 +1,354 @@
+:root {
+    --ic_arrow: url('@/assets/img/ic_arrow.svg');
+    --ic_phone: url('@/assets/img/ic_local_phone_48px.svg');
+    --ic_zomm_in: url('@/assets/img/ic_zoom_in_24px.svg');
+    --ic_replay: url('@/assets/img/ic_replay_24px.svg');
+    --ic_clear: url('@/assets/img/ic_clear_48px.svg');
+    --ic_kb_arrow_left: url('@/assets/img/ic_keyboard_arrow_left_48px.svg');
+    --ic_account: url('@/assets/img/ic_account.svg');
+    --ic_error: url('@/assets/img/ic_error.svg');
+    --ic_home: url('@/assets/img/ic_home_24px.svg');
+    --ic_left: url('@/assets/img/ic_left.svg');
+    --ic_right: url('@/assets/img/ic_right.svg');
+    --ic_dropdown: url('@/assets/img/ic_dropdown_32px.svg');
+    --ic_remove: url('@/assets/img/ic_remove_24px.svg');
+    --ic_checked: url('@/assets/img/ic_checked_24px.svg');
+    --ic_download: url('@/assets/img/ic_download_24px.svg');
+    --ic_lock: url('@/assets/img/ic_lock_48px.svg');
+}
+.rotate-0 {
+    transform: rotate(00deg);
+}
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+.ic_arrow {
+    background-image: var(--ic_arrow);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_phone {
+    background-image: var(--ic_phone);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_zomm_in {
+    background-image: var(--ic_zomm_in);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_replay {
+    background-image: var(--ic_replay);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_clear {
+    background-image: var(--ic_clear);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_kb_arrow_left {
+    background-image: var(--ic_kb_arrow_left);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_kb_arrow_right {
+    background-image: var(--ic_kb_arrow_left);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.ic_account {
+    background-image: var(--ic_account);
+    background-size: 100%;
+    width: 3.6rem;
+    height: 3.6rem;
+    display: inline-block;
+}
+
+.ic_error {
+    background-image: var(--ic_error);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_home {
+    background-image: var(--ic_home);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_left_gray {
+    background-image: var(--ic_left);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.ic_right_gray {
+    background-image: var(--ic_left);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.ic_left {
+    background-image: var(--ic_right);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+.ic_right {
+    background-image: var(--ic_right);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_dropdown {
+    background-image: var(--ic_dropdown);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.ic_remove {
+    background-image: var(--ic_remove);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_checked {
+    background-image: var(--ic_checked);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_download {
+    background-image: var(--ic_download);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.ic_lock {
+    background-image: var(--ic_lock);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+/* sort icon */
+em.sort {
+    border: 0px;
+}
+.asc > .sort::after {
+    content: '\ed41';
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1rem;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    /* -webkit-animation: slide-updown 1s ease-in-out infinite;
+    -moz-animation: slide-updown 1s ease-in-out infinite;
+    -ms-animation: slide-updown 1s ease-in-out infinite;
+    -o-animation: slide-updown 1s ease-in-out infinite;
+    animation: slide-updown 1s ease-in-out infinite; */
+    color: var(--sort-asc);
+}
+
+.desc > .sort::after {
+    content: '\ed3e';
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1rem;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    /* -webkit-animation: slide-updown 1s ease-in-out infinite;
+    -moz-animation: slide-updown 1s ease-in-out infinite;
+    -ms-animation: slide-updown 1s ease-in-out infinite;
+    -o-animation: slide-updown 1s ease-in-out infinite;
+    animation: slide-updown 1s ease-in-out infinite; */
+    color: var(--sort-desc);
+}
+
+.sort-seq-1 > .sort::before {
+    content: '1';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-2 > .sort::before {
+    content: '2';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-3 > .sort::before {
+    content: '3';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-4 > .sort::before {
+    content: '4';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-5 > .sort::before {
+    content: '5';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-6 > .sort::before {
+    content: '6';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-7 > .sort::before {
+    content: '7';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-8 > .sort::before {
+    content: '8';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-9 > .sort::before {
+    content: '9';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-10 > .sort::before {
+    content: '10';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-11 > .sort::before {
+    content: '11';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+.sort-seq-12 > .sort::before {
+    content: '12';
+    margin-right: 0.2em;
+    color: var(--sort-seq);
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.65em;
+    vertical-align: super;
+}
+
+/* DatePicker icon */
+.date-picker {
+    font-family: boxicons !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-size: 1.75rem;
+    text-rendering: auto;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-flex !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+.date-picker::before {
+    content: '\ea15';
+    font-size: 1.3rem;
+    margin-left: 0.4rem;
+}

@@ -1,0 +1,287 @@
+/* 버튼 icon 목록 Boxicon */
+@import url('./keyframes.css');
+
+:root {
+    /* icon content */
+    --ic-login: '\eb4d';
+    --ic-logout: '\eb4f';
+    --ic-check: '\ea41';
+    --ic-x: '\ec8d';
+    --ic-search: '\ebf7';
+    --ic-list: '\eb44';
+    --ic-list-plus: '\eb43';
+    --ic-detail: '\ea97';
+    --ic-list-ul: '\eb44';
+    --ic-save: '\ebf4';
+    --ic-eraser: '\eac4';
+    --ic-user: '\ec63';
+    --ic-upload: '\ec5f';
+    --ic-download: '\eab9';
+    --ic-chevron-up: '\ea57';
+    --ic-chevron-down: '\ea4a';
+    --ic-chevron-left: '\ea4d';
+    --ic-chevron-right: '\ea50';
+    --ic-chevrons-up: '\ea56';
+    --ic-chevrons-down: '\ea53';
+    --ic-chevrons-left: '\ea54';
+    --ic-chevrons-right: '\ea55';
+    --ic-delete: '\eed4';
+    --ic-revoke: '\ec50';
+    --ic-plus: '\ebc0';
+    --ic-minus: '\eb8b';
+    --ic-home: '\ef2d';
+    --ic-run: '\ebf1';
+    --ic-tag-x: '\eec2';
+    --ic-x-circle: '\ec8e';
+    --ic-x-circle-solid: '\ef06';
+    --ic-message-alt-x: '\eb6d';
+    --ic-message-rounded-x: '\eb7c';
+    --ic-reset: '\ebe0';
+    --ic-user-account: '\eee2';
+    --ic-wifi: '\ec7c';
+    --ic-wifi-off: '\ec80';
+    --ic-list-check: '\eb40';
+    --ic-check-shield: '\ea48';
+}
+
+/* icon base */
+.bxc {
+    font-family: boxicons !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-size: 1.75rem;
+    line-height: 1 !important;
+    text-rendering: auto;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* icon image */
+.bxc-login:before {
+    content: var(--ic-login);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-logout:before {
+    content: var(--ic-logout);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-check:before {
+    content: var(--ic-check);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-x:before {
+    content: var(--ic-x);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-search:before {
+    content: var(--ic-search);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-list:before {
+    content: var(--ic-list);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-list-plus:before {
+    content: var(--ic-list-plus);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-list-ul:before {
+    content: var(--ic-list-ul);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-save:before {
+    content: var(--ic-save);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-eraser:before {
+    content: var(--ic-eraser);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-user:before {
+    content: var(--ic-user);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-upload:before {
+    content: var(--ic-upload);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-upload-sm:before {
+    content: var(--ic-upload);
+    margin-right: 0.3rem;
+    font-size: 1rem !important;
+}
+.bxc-download:before {
+    content: var(--ic-download);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-download-sm:before {
+    content: var(--ic-download);
+    margin-right: 0.3rem;
+    font-size: 1rem !important;
+}
+.bxc-chevron-up:before {
+    content: var(--ic-chevron-up);
+    /* margin-right: 0.3rem; */
+    font-size: 1.75rem !important;
+}
+.bxc-chevron-down:before {
+    content: var(--ic-chevron-down);
+    /* margin-right: 0.3rem; */
+    font-size: 1.75rem !important;
+}
+.bxc-chevron-left:before {
+    content: var(--ic-chevron-left);
+    /* margin-right: 0.3rem; */
+    font-size: 1.75rem !important;
+}
+.bxc-chevron-right:before {
+    content: var(--ic-chevron-right);
+    /* margin-right: 0.3rem; */
+    font-size: 1.75rem !important;
+}
+.bxc-revoke:before {
+    content: var(--ic-revoke);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-delete:before {
+    content: var(--ic-delete);
+    margin-right: 0.3rem;
+    font-size: 1.75rem !important;
+}
+.bxc-plus:before {
+    content: var(--ic-plus);
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-minus:before {
+    content: var(--ic-minus);
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-run:before {
+    content: var(--ic-run);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-msg-alt-x:before {
+    content: var(--ic-message-alt-x);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-reset:before {
+    content: var(--ic-reset);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-remove:before {
+    content: var(--ic-remove);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-user-account:before {
+    content: var(--ic-user-account);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-wifi:before {
+    content: var(--ic-wifi);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-wifi-off:before {
+    content: var(--ic-wifi-off);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-list-check:before {
+    content: var(--ic-list-check);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+.bxc-check-shield:before {
+    content: var(--ic-check-shield);
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+}
+
+/* animation */
+.bxc-login:hover:before,
+.bxc-logout:hover:before,
+.bxc-check:hover:before,
+.bxc-x:hover:before,
+.bxc-list:hover:before,
+.bxc-list-plus:hover:before,
+.bxc-list-ul:hover:before,
+.bxc-save:hover:before,
+.bxc-user:hover:before,
+.bxc-user-account:hover:before,
+.bxc-close:hover:before,
+.bxc-list-check:before .bxc-check-shield:before,
+.bxc-ani-tada {
+    -webkit-animation: tada 2s ease infinite !important;
+    animation: tada 2s ease infinite !important;
+}
+.bxc-ani-spin {
+    -webkit-animation: spin 2s linear infinite !important;
+    animation: spin 2s linear infinite !important;
+}
+.bxc-reset:hover:before,
+.spin-reverse,
+.bxc-ani-loading {
+    -webkit-animation: spin 2s linear infinite reverse !important;
+    animation: spin 2s linear infinite reverse !important;
+}
+.bxc-eraser:hover:before,
+.bxc-wifi-off:before,
+.bxc-run:before + .emergency,
+.bxc-ani-alert {
+    -webkit-animation: flashing 2s linear infinite;
+    animation: flashing 2s linear infinite;
+}
+.bxc-search:hover:before,
+.bxc-ani-burst {
+    -webkit-animation: burst 2s linear infinite !important;
+    animation: burst 2s linear infinite !important;
+}
+
+.bxc-upload:hover:before,
+.bxc-ani-bx-slide-up {
+    -webkit-animation: slide-up 2s infinite linear;
+    animation: slide-up 2s infinite linear;
+}
+
+.bxc-download:hover:before,
+.bxc-ani-bx-slide-down {
+    -webkit-animation: slide-down 2s infinite linear;
+    animation: slide-down 2s infinite linear;
+}
+.bxc-ani-bx-slide-left {
+    -webkit-animation: slide-left 2s infinite linear;
+    animation: slide-left 2s infinite linear;
+}
+.bxc-run:hover:before,
+.bxc-ani-bx-slide-right {
+    -webkit-animation: slide-right 2s infinite linear;
+    animation: slide-right 2s infinite linear;
+}

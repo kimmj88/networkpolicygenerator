@@ -1,0 +1,50 @@
+.content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* TODO DARKMODE */
+    /* color: white; */
+    /* padding: 0 1rem 0 0; */
+}
+
+.content-header .item:first-child span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: inherit;
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    white-space: nowrap;
+    /* max-width: 18rem; */
+}
+.content-header .item ol,
+.content-header .item ol li > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0.3rem 0;
+    font-size: 1rem;
+}
+.content-header .item ol li .icon {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+/* .content-title {
+    display: inline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 3rem;
+} */
+.content-header .item ol li > div span {
+    display: inline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 10rem;
+}
+
+.content-header .item ol li:last-child div span {
+    color: var(--text-blue);
+}

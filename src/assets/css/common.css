@@ -1,0 +1,397 @@
+@import url('./fonts.css');
+@import url('./login.css');
+@import url('./gnb.css');
+@import url('./icon.css');
+@import url('./keyframes.css');
+@import url('./btn_icon.css');
+@import url('./vselect.css');
+
+:root {
+    /* https://www.rapidtables.com/convert/color/hex-to-rgb.html */
+    --text: rgb(255, 255, 255);
+    --text-black: rgb(0, 0, 0);
+    --text-blue: rgb(86, 157, 200);
+    --text-green: rgb(19, 207, 72);
+    --text-hover: rgb(0, 190, 255);
+    --text-chart: rgb(77, 77, 77);
+    --hover: rgb(62, 141, 168);
+    --alert: rgb(255, 0, 0);
+    --sort-seq: rgb(59, 167, 73);
+    --sort-asc: rgb(61, 147, 197);
+    --sort-desc: rgb(228, 108, 94);
+    --nav-bg: rgb(35, 35, 35);
+    --nav-sidebar-bg: rgb(62, 141, 168);
+    --nav-text: var(--text);
+    --nav-text-hover: var(--hover);
+    --nav-logo: var(--text);
+    --nav-icon: var(--text);
+    --nav-icon-hover: var(--hover);
+    --nav-arrow: var(--text);
+    --nav-arrow-hover: var(--hover);
+    --content-wrapper: rgb(233, 239, 245);
+    --content-bg-black-20: rgba(0, 0, 0, 0.2);
+    --content-bg-black-40: rgba(0, 0, 0, 0.4);
+    --content-bg-black-60: rgba(0, 0, 0, 0.6);
+    --content-bg-black-80: rgba(0, 0, 0, 0.8);
+    --content-bg-black: rgba(0, 0, 0, 1);
+    --content-bg-white-20: rgba(255, 255, 255, 0.2);
+    --content-bg-white-40: rgba(255, 255, 255, 0.4);
+    --content-bg-white-60: rgba(255, 255, 255, 0.6);
+    --content-bg-white-80: rgba(255, 255, 255, 0.8);
+    --content-bg-white: rgba(255, 255, 255, 1);
+    --content-bg-20: rgba(233, 239, 245, 0.2);
+    --content-bg-40: rgba(233, 239, 245, 0.4);
+    --content-bg-60: rgba(233, 239, 245, 0.6);
+    --content-bg-80: rgba(233, 239, 245, 0.8);
+    --content-bg: rgba(233, 239, 245, 1);
+    --content-bg-red: rgba(255, 0, 0, 1);
+    --content-bg-green: rgba(0, 255, 0, 1);
+
+    --title-bg: rgb(0, 190, 255);
+
+    --legend-1: rgb(0, 121, 233);
+    --legend-2: rgb(0, 233, 156);
+    --legend-3: rgb(255, 161, 61);
+    --legend-4: rgb(45, 170, 210);
+    --legend-5: rgb(100, 205, 200);
+    --legend-6: rgb(236, 150, 154);
+    --legend-7: rgb(75, 200, 240);
+    --legend-8: rgb(130, 235, 230);
+    --legend-9: rgb(255, 180, 184);
+
+    --table-divide-line: rgb(220, 220, 220);
+
+    --event-good-text: rgb(86, 157, 200);
+    --event-fail-text: rgb(255, 0, 0);
+
+    --gnb-width: 20rem;
+    --gnb-height: 70px;
+
+    --bg-gray: rgb(224, 232, 240);
+
+    --input-bg: rgb(233, 239, 245);
+    --input-bg-black: rgb(0, 0, 0);
+    --input-border: rgb(200, 207, 215);
+    --input-border-black: rgb(0, 0, 0);
+    --input-border-blue: rgb(37 99 235);
+    --input-btn: rgb(200, 207, 215);
+    --input-outline: rgb(0, 121, 233);
+    --input-outline-required: rgb(220, 0, 0);
+    --input-outline-complete: rgb(0, 200, 0);
+
+    --btn-border: rgb(204, 204, 204);
+    --btn-bg-white: rgb(255, 255, 255);
+    --btn-bg-black: rgb(0, 0, 0);
+    --btn-bg-active-black: rgb(0, 0, 0);
+    --btn-bg-active-blue: rgb(0, 190, 255);
+
+    --card-table-header-height: 2.8rem;
+
+    --v-select-in-card: rgb(233, 239, 245);
+    --v-select-out-card: rgb(252, 253, 254);
+
+    --z-index-base: 10;
+    --z-index-btn: 11;
+    --z-index-bg-popup: 9999;
+    --z-index-popup: 10000;
+    --z-index-bg-modal: 9999;
+    --z-index-modal: 10000;
+    --z-index-bg-gnb-base: 100;
+    --z-index-bg-gnb-item: 110;
+    --z-index-title: 120;
+
+    --chart-line: rgb(67, 207, 18);
+    --chart-line-alert: rgb(255, 0, 0);
+
+    --status: rgb(67, 207, 18);
+    --status-warning: rgb(255, 220, 0);
+    --status-danger: rgb(255, 0, 0);
+
+    font-size: 16px;
+    --content-title-hegiht: 4rem;
+
+    --card-shadow-primary: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 5px -1px rgba(0, 0, 0, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* https://www.rapidtables.com/convert/color/hex-to-rgb.html */
+        --text: rgb(255, 255, 255);
+        --text-black: rgb(0, 0, 0);
+        --text-blue: rgb(86, 157, 200);
+        --text-green: rgb(19, 207, 72);
+        --text-hover: rgb(0, 190, 255);
+        --text-chart: rgb(77, 77, 77);
+        --hover: rgb(62, 141, 168);
+        --alert: rgb(255, 0, 0);
+        --sort-seq: rgb(59, 167, 73);
+        --sort-asc: rgb(61, 147, 197);
+        --sort-desc: rgb(228, 108, 94);
+        --nav-bg: rgb(35, 35, 35);
+        --nav-sidebar-bg: rgb(62, 141, 168);
+        --nav-text: var(--text);
+        --nav-text-hover: var(--hover);
+        --nav-logo: var(--text);
+        --nav-icon: var(--text);
+        --nav-icon-hover: var(--hover);
+        --nav-arrow: var(--text);
+        --nav-arrow-hover: var(--hover);
+        --content-wrapper: rgb(233, 239, 245);
+        --content-bg-black-20: rgba(0, 0, 0, 0.2);
+        --content-bg-black-40: rgba(0, 0, 0, 0.4);
+        --content-bg-black-60: rgba(0, 0, 0, 0.6);
+        --content-bg-black-80: rgba(0, 0, 0, 0.8);
+        --content-bg-black: rgba(0, 0, 0, 1);
+        --content-bg-white-20: rgba(255, 255, 255, 0.2);
+        --content-bg-white-40: rgba(255, 255, 255, 0.4);
+        --content-bg-white-60: rgba(255, 255, 255, 0.6);
+        --content-bg-white-80: rgba(255, 255, 255, 0.8);
+        --content-bg-white: rgba(255, 255, 255, 1);
+        --content-bg-20: rgba(233, 239, 245, 0.2);
+        --content-bg-40: rgba(233, 239, 245, 0.4);
+        --content-bg-60: rgba(233, 239, 245, 0.6);
+        --content-bg-80: rgba(233, 239, 245, 0.8);
+        --content-bg: rgba(233, 239, 245, 1);
+        --content-bg-red: rgba(255, 0, 0, 1);
+        --content-bg-green: rgba(0, 255, 0, 1);
+
+        --title-bg: rgb(0, 190, 255);
+
+        --legend-1: rgb(0, 121, 233);
+        --legend-2: rgb(0, 233, 156);
+        --legend-3: rgb(255, 161, 61);
+        --legend-4: rgb(45, 170, 210);
+        --legend-5: rgb(100, 205, 200);
+        --legend-6: rgb(236, 150, 154);
+        --legend-7: rgb(75, 200, 240);
+        --legend-8: rgb(130, 235, 230);
+        --legend-9: rgb(255, 180, 184);
+
+        --table-divide-line: rgb(220, 220, 220);
+
+        --event-good-text: rgb(86, 157, 200);
+        --event-fail-text: rgb(255, 0, 0);
+
+        --gnb-width: 20rem;
+        --gnb-height: 70px;
+
+        --bg-gray: rgb(224, 232, 240);
+
+        --input-bg: rgb(233, 239, 245);
+        --input-bg-black: rgb(0, 0, 0);
+        --input-border: rgb(200, 207, 215);
+        --input-border-black: rgb(0, 0, 0);
+        --input-border-blue: rgb(37 99 235);
+        --input-btn: rgb(200, 207, 215);
+        --input-outline: rgb(0, 121, 233);
+        --input-outline-required: rgb(255, 0, 0);
+        --input-outline-complete: rgb(0, 250, 0);
+
+        --btn-border: rgb(204, 204, 204);
+        --btn-bg-white: rgb(255, 255, 255);
+        --btn-bg-black: rgb(0, 0, 0);
+        --btn-bg-active-black: rgb(0, 0, 0);
+        --btn-bg-active-blue: rgb(0, 190, 255);
+
+        --card-table-header-height: 2.8rem;
+
+        --v-select-in-card: rgb(233, 239, 245);
+        --v-select-out-card: rgb(252, 253, 254);
+
+        --z-index-base: 10;
+        --z-index-btn: 11;
+        --z-index-bg-popup: 9999;
+        --z-index-popup: 10000;
+        --z-index-bg-modal: 9999;
+        --z-index-modal: 10000;
+        --z-index-bg-gnb-base: 100;
+        --z-index-bg-gnb-item: 110;
+        --z-index-title: 120;
+
+        --chart-line: rgb(67, 207, 18);
+        --chart-line-alert: rgb(255, 0, 0);
+
+        --status: rgb(67, 207, 18);
+        --status-warning: rgb(255, 220, 0);
+        --status-danger: rgb(255, 0, 0);
+
+        font-size: 16px;
+        --content-title-hegiht: 4rem;
+    }
+}
+
+* {
+    font-family: 'SpoqaHanSansNeo';
+}
+
+.content-bg {
+    background-color: var(--content-bg);
+}
+
+header,
+footer {
+    background: var(--nav-bg);
+    color: var(--text);
+}
+
+.body > .body-contents:has(> .gnb.left) {
+    display: flex;
+    justify-content: flex-start;
+}
+.body > .body-contents:has(> .gnb.top) {
+    display: grid;
+}
+
+.body > .body-contents > .gnb.left {
+    width: var(--gnb-width);
+}
+.body > .body-contents > .content {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+.body > .body-contents:has(> .gnb.left) > .content {
+    width: calc(100% - var(--gnb-width));
+}
+
+.body > .body-contents > .content:has(> .login) {
+    flex-basis: 100% !important;
+}
+
+.content-wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding: 1.2rem;
+    overflow-y: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* white 기존버전 */
+    /* background-color: var(--content-wrapper); */
+    /* TODO dark mode */
+    /* background-color: rgb(25, 25, 25); */
+}
+
+.alert {
+    color: var(--alert) !important;
+    fill: var(--alert) !important;
+    -webkit-animation: flashing 2s linear infinite;
+    animation: flashing 2s linear infinite;
+}
+
+.no-width {
+    width: unset !important;
+}
+.no-height {
+    height: unset !important;
+}
+
+.status.good > span:nth-child(2) {
+    color: var(--event-good-text);
+}
+.status.fail {
+    color: var(--event-fail-text);
+}
+.status.fail > span:first-child {
+    color: var(--text-black);
+}
+
+.pagination {
+    margin: 1rem 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pagination .page-per-data {
+    min-width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.popupBg,
+.loadingBg {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: #fff;
+    text-align: center;
+    z-index: var(--z-index-bg-modal);
+}
+
+.loadingBg.is-visible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.loadingBg > #loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+.loading {
+    font-family: boxicons !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-size: 1.75rem;
+    line-height: 1 !important;
+    text-rendering: auto;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.loading::before {
+    content: '\ebd9';
+}
+
+.custom__card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--card-shadow-primary);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: #fff !important;
+    color: white !important;
+}
+
+/* Reset Input[type=number] Default CSS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Reset Input[type=number] Default CSS for Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.with-label:has(.required) div:first-child > span:not(.vs__selected)::after {
+    content: '*';
+    color: var(--alert);
+    font-size: 1rem;
+}

@@ -1,0 +1,234 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  // url      = "file:./test.db"
+  url      = env("DATABASE_URL")
+}
+
+model Variable {
+  id          Int      @id @default(autoincrement())
+  type_cd     String
+  key         String   @unique
+  value       String?
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+}
+
+model Policy {
+  id            Int           @id @default(autoincrement())
+  title         String        @unique
+  create_time   DateTime      @default(now())
+  modify_time   DateTime      @updatedAt
+  policyModules PolicyModule[]
+}
+
+model PolicyModule {
+  policy_id Int   
+  policy    Policy @relation(fields: [policy_id], references: [id], onDelete: Cascade) 
+  module_id Int    
+  module    Module @relation(fields: [module_id], references: [id])
+  @@unique([policy_id, module_id])
+  @@id([policy_id, module_id])
+}
+
+model Module {
+  id          Int           @id @default(autoincrement())
+  title       String        @unique
+  type_cd     String
+  create_time DateTime      @default(now())
+  modify_time DateTime      @updatedAt
+  policyModules PolicyModule[]
+  module_value_list ModuleValue[]
+}
+
+model ModuleValue {
+  id        Int    @id @default(autoincrement())
+  module_id Int
+  type_cd   String
+  value     String
+  module    Module @relation(fields: [module_id], references: [id], onDelete: Cascade)
+}
+
+model Ruleset {
+  id          Int      @id @default(autoincrement())
+  title       String   @unique
+  description String?
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+  rules       RuleOnRuleset[]
+}
+
+model RuleOnRuleset {
+  ruleset Ruleset @relation(fields: [ruleset_id], references: [id], onDelete: Cascade)
+  ruleset_id Int
+  rule Rule @relation(fields: [rule_id], references: [id], onUpdate: NoAction)
+  rule_id Int
+
+  @@id([ruleset_id, rule_id])
+}
+
+model Rule {
+  id                    Int                  @id @default(autoincrement())
+  // ruleset_id            Int?
+  title                 String               @unique
+  action                String
+  msg                   String
+  sid                   Int
+  rev                   Int
+  gid                   Int?
+  create_time           DateTime             @default(now())
+  modify_time           DateTime             @updatedAt
+  ruleset               RuleOnRuleset[]
+  rule_detection_filter RuleDetectionFilter?
+  rule_header           RuleHeader?
+  rule_non_payload      RuleNonPayload?
+  rule_payload          RulePayload?
+}
+
+model RuleHeader {
+  id Int @id @default(autoincrement())
+  rule_id           Int  @unique
+  rule              Rule    @relation(fields: [rule_id], references: [id], onDelete: Cascade)
+  protocol          String
+  source_address    String
+  source_port       String
+  direction_operator String
+  dest_address       String
+  dest_port          String
+}
+
+model RulePayload{
+  id Int @id @default(autoincrement())
+  rule_id           Int  @unique
+  rule              Rule    @relation(fields: [rule_id], references: [id], onDelete: Cascade)
+
+  content String?
+  pcre String?
+  fast_pattern String?
+  negation Boolean @default(false)
+  nocase Boolean?
+  offset Int?
+  depth Int?
+  distance Int?
+  within Int?
+}
+
+model RuleNonPayload{
+  id Int @id @default(autoincrement())
+  rule_id           Int  @unique
+  rule              Rule    @relation(fields: [rule_id], references: [id], onDelete: Cascade)
+  fragoffset String?
+  ttl String?
+  tos String?
+  ip_header_id String?
+  ipopts String?
+  fragbits String?
+  ip_proto String?
+  flags String?
+  seq String?
+  ack String?
+  window String?
+  stream_reassemble String?
+  stream_size String?
+  flow String?
+  flowbits String?
+  itype String?
+  icode String?
+  icmp_id String?
+  icmp_seq String?
+}
+
+model RuleDetectionFilter{
+  id Int @id @default(autoincrement())
+  rule_id           Int  @unique
+  rule              Rule    @relation(fields: [rule_id], references: [id], onDelete: Cascade)
+  track String
+  count Int
+  seconds Int
+}
+
+model MngMenu {
+  id              Int      @id @default(autoincrement())
+  menu_id         String
+  menu_nm         String
+  menu_url        String
+  menu_dc         String
+  up_menu_id      String
+  menu_icon_class String
+  sort_order      String
+  use_yn          String   @default("Y")
+  create_time     DateTime @default(now())
+  modify_time     DateTime @updatedAt
+
+  ml_info         MngMenuMl[]
+
+  @@unique([menu_id])
+  @@index([menu_id])
+}
+
+model MngMenuMl {
+  id          Int      @id @default(autoincrement())
+  parent_id   Int?  @unique
+  mng_menu    MngMenu?    @relation(fields: [parent_id], references: [id], onDelete: Cascade)
+  menu_id     String
+  lang_cd     String
+  name        String
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+
+  @@unique([menu_id, lang_cd])
+  @@index([menu_id, lang_cd])
+}
+
+model MngGrpCode {
+  id          Int      @id @default(autoincrement())
+  grp_cd      String
+  grp_cd_nm   String
+  grp_cd_dc   String
+  use_yn      String   @default("Y")
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+
+  @@unique([grp_cd])
+  @@index([grp_cd])
+}
+
+model MngCode {
+  id          Int      @id @default(autoincrement())
+  grp_cd      String
+  cd          String
+  cd_nm       String
+  cd_dc       String
+  item1       String
+  item2       String
+  item3       String
+  item4       String
+  item5       String
+  sort_order  String
+  use_yn      String   @default("Y")
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+
+  ml_info     MngCodeMl[]
+
+  @@unique([grp_cd, cd])
+  @@index([grp_cd, cd])
+}
+
+model MngCodeMl {
+  id          Int      @id @default(autoincrement())
+  parent_id   Int?  @unique
+  mng_code    MngCode?    @relation(fields: [parent_id], references: [id], onDelete: Cascade)
+  grp_cd      String
+  cd          String
+  lang_cd     String
+  name        String
+  create_time DateTime @default(now())
+  modify_time DateTime @updatedAt
+
+  @@unique([grp_cd, cd, lang_cd])
+  @@index([grp_cd, cd, lang_cd])
+}

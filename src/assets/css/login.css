@@ -1,0 +1,146 @@
+.login {
+    width: 100%;
+    height: 100%;
+    background-image: url('@/assets/img/login_bg.jpg');
+    background-size: cover;
+}
+.login img.ci {
+    background-image: url('@/assets/img/BI_AutoCryptKeyLink_white.png');
+    background-size: cover;
+}
+/* Login Title */
+.login .title {
+    position: absolute;
+    left: calc(50% - 18rem);
+    top: calc(50% - 11rem);
+
+    width: 618px;
+    height: 65px;
+    font-family: SpoqaHanSansNeo;
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.login .input-form {
+    position: absolute;
+    left: calc(50% - 10rem);
+    top: calc(50% - 4rem);
+
+    width: 24rem;
+    height: 18rem;
+}
+
+.login .input-form .body {
+    flex-grow: 0;
+}
+
+/* .login .input-form .body input {
+    width: 100%;
+    height: 3rem;
+    padding: 1rem 1.2rem;
+    border: solid 1px var(--input-border);
+    background-color: var(--content-bg-white-20);
+
+    color: var(--text);
+    font-size: 1.2rem;
+} */
+
+.login .input-form .body input.pw {
+    margin-top: 1rem;
+}
+
+.pw-input {
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: solid 1px var(--input-border);
+    background-color: var(--content-bg-white-20);
+}
+
+.pw-input input {
+    margin-top: 0rem !important;
+    margin-right: 0.5rem;
+    width: calc(100% - 3.5rem) !important;
+
+    border: 0px !important;
+    background-color: unset !important;
+    /* padding: 1rem 0 1rem 1.2rem; */
+    /* width: calc(100% - 3rem); */
+}
+.pw-input i {
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    top: calc(50% - 1.2rem);
+}
+
+.id-saver {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.id-saver input {
+    width: 1rem !important;
+    height: 1rem !important;
+    font-size: 1.2rem;
+    clip-path: circle(56% at 50% 50%);
+    padding: 0px !important;
+    border-radius: 4px;
+}
+.id-saver p {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 0 0.5rem;
+}
+
+.login .input-form .tool button {
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.login .input-form .tool span {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    flex-grow: 0;
+    margin: 1rem 0 0;
+    padding-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 0%;
+
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.login footer {
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+}
+
+.login footer span {
+    color: var(--vs-disabled-color);
+}
+
+.login footer span a {
+    color: var(--vs-disabled-color);
+    text-decoration: none;
+}
